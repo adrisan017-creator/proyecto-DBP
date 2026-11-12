@@ -35,6 +35,24 @@ h3 {
   margin: 0 0 0.5rem 0;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3,
+.snack h2 {
+  font-size: 1.17rem;
+}
+
+main[id],
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
 .contenedor {
   width: 100%;
   max-width: 1080px;
@@ -42,7 +60,8 @@ h3 {
   padding: 0 1rem;
 }
 
-main.contenedor {
+main.contenedor,
+.cuerpo {
   padding-top: 1.5rem;
   padding-bottom: 2.5rem;
 }
@@ -54,6 +73,22 @@ main.contenedor {
 .oculto {
   position: absolute;
   left: -9999px;
+}
+
+/* Enlace para saltar el menú: solo se ve al recibir el foco del teclado */
+.saltar {
+  position: absolute;
+  left: -9999px;
+  z-index: 20;
+  padding: 0.6rem 1rem;
+  background-color: var(--amarillo);
+  color: var(--verde-oscuro);
+  font-weight: bold;
+}
+
+.saltar:focus {
+  left: 0;
+  top: 0;
 }
 
 /* ---------- Barra superior ---------- */
@@ -124,7 +159,7 @@ main.contenedor {
 /* ---------- Portada ---------- */
 
 .portada {
-  background: linear-gradient(120deg, var(--verde-oscuro), var(--verde));
+  background: linear-gradient(120deg, var(--verde-oscuro), #125c36);
   color: #ffffff;
   padding: 3rem 0;
 }
@@ -399,7 +434,7 @@ input,
 select {
   width: 100%;
   padding: 0.5rem 0.6rem;
-  border: 1px solid #9fb0a5;
+  border: 1px solid #6b7f72;
   border-radius: 8px;
   font-family: inherit;
   font-size: 1rem;

@@ -1,4 +1,4 @@
-# proyecto-DBP
+# Boletería del Estadio Reales Tamarindos
 
 Sitio web en HTML5, CSS y JavaScript para la venta de boletos del Estadio Reales Tamarindos (Portoviejo).
 

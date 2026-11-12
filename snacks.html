@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="css/estadio.css">
 </head>
 <body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
   <header class="barra">
     <div class="contenedor barra-contenido">
       <a class="marca" href="index.html">
@@ -21,17 +23,17 @@
     </div>
   </header>
 
-  <main class="contenedor">
+  <main id="contenido" class="contenedor">
     <h1>Snacks del estadio</h1>
     <p>Arma tu pedido y retíralo en los bares del estadio el día del partido.</p>
 
     <div class="dos-columnas">
-      <section class="snacks">
+      <div class="snacks">
         <article class="snack" data-nombre="Empanada de verde" data-precio="1.50">
           <img src="img/empanada.png" width="300" height="300" alt="Empanada de verde">
           <div class="snack-cuerpo">
             <span class="precio">$1.50</span>
-            <h3>Empanada de verde</h3>
+            <h2>Empanada de verde</h2>
             <p>De verde con queso, como se hace en Manabí.</p>
             <button type="button" class="boton boton-ancho agregar">Añadir al pedido</button>
           </div>
@@ -40,7 +42,7 @@
           <img src="img/hotdog.png" width="300" height="300" alt="Hot dog">
           <div class="snack-cuerpo">
             <span class="precio">$2.50</span>
-            <h3>Hot dog</h3>
+            <h2>Hot dog</h2>
             <p>Con salchicha, salsas y picadillo.</p>
             <button type="button" class="boton boton-ancho agregar">Añadir al pedido</button>
           </div>
@@ -49,7 +51,7 @@
           <img src="img/canguil.png" width="300" height="300" alt="Canguil">
           <div class="snack-cuerpo">
             <span class="precio">Desde $2.00</span>
-            <h3>Canguil</h3>
+            <h2>Canguil</h2>
             <p>Recién hecho, con sal.</p>
           <label for="op-canguil" class="oculto">Tamaño de canguil</label>
           <select id="op-canguil">
@@ -64,7 +66,7 @@
           <img src="img/cola.png" width="300" height="300" alt="Gaseosa">
           <div class="snack-cuerpo">
             <span class="precio">Desde $1.50</span>
-            <h3>Gaseosa</h3>
+            <h2>Gaseosa</h2>
             <p>Bien fría, del sabor que prefieras.</p>
           <label for="op-cola" class="oculto">Tamaño de gaseosa</label>
           <select id="op-cola">
@@ -75,7 +77,7 @@
             <button type="button" class="boton boton-ancho agregar">Añadir al pedido</button>
           </div>
         </article>
-      </section>
+      </div>
 
       <aside class="panel pedido">
         <h2>Tu pedido</h2>

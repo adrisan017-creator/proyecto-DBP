@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snacks | Estadio Reales Tamarindos</title>
+  <link rel="stylesheet" href="css/estadio.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor barra-contenido">
+      <a class="marca" href="index.html">
+        <span class="marca-balon" aria-hidden="true">⚽</span>
+        <span>Reales Tamarindos <small>Boletería oficial</small></span>
+      </a>
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="index.html">Partidos</a>
+        <a href="snacks.html" class="activo" aria-current="page">Snacks</a>
+        <a href="registro.html">Crear cuenta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <h1>Snacks del estadio</h1>
+    <p>Arma tu pedido y retíralo en los bares del estadio el día del partido.</p>
+
+    <div class="dos-columnas">
+      <section class="snacks">
+        <article class="snack" data-nombre="Empanada de verde" data-precio="1.50">
+          <img src="img/empanada.png" width="300" height="300" alt="Empanada de verde">
+          <div class="snack-cuerpo">
+            <span class="precio">$1.50</span>
+            <h3>Empanada de verde</h3>
+            <p>De verde con queso, como se hace en Manabí.</p>
+            <button type="button" class="boton boton-ancho agregar">Añadir al pedido</button>
+          </div>
+        </article>
+        <article class="snack" data-nombre="Hot dog" data-precio="2.50">
+          <img src="img/hotdog.png" width="300" height="300" alt="Hot dog">
+          <div class="snack-cuerpo">
+            <span class="precio">$2.50</span>
+            <h3>Hot dog</h3>
+            <p>Con salchicha, salsas y picadillo.</p>
+            <button type="button" class="boton boton-ancho agregar">Añadir al pedido</button>
+          </div>
+        </article>
+        <article class="snack" data-nombre="Canguil">
+          <img src="img/canguil.png" width="300" height="300" alt="Canguil">
+          <div class="snack-cuerpo">
+            <span class="precio">Desde $2.00</span>
+            <h3>Canguil</h3>
+            <p>Recién hecho, con sal.</p>
+          <label for="op-canguil" class="oculto">Tamaño de canguil</label>
+          <select id="op-canguil">
+            <option value="2.00">Pequeño · $2.00</option>
+            <option value="3.00">Mediano · $3.00</option>
+            <option value="4.00">Grande · $4.00</option>
+          </select>
+            <button type="button" class="boton boton-ancho agregar">Añadir al pedido</button>
+          </div>
+        </article>
+        <article class="snack" data-nombre="Gaseosa">
+          <img src="img/cola.png" width="300" height="300" alt="Gaseosa">
+          <div class="snack-cuerpo">
+            <span class="precio">Desde $1.50</span>
+            <h3>Gaseosa</h3>
+            <p>Bien fría, del sabor que prefieras.</p>
+          <label for="op-cola" class="oculto">Tamaño de gaseosa</label>
+          <select id="op-cola">
+            <option value="1.50">Pequeño · $1.50</option>
+            <option value="2.00">Mediano · $2.00</option>
+            <option value="2.50">Grande · $2.50</option>
+          </select>
+            <button type="button" class="boton boton-ancho agregar">Añadir al pedido</button>
+          </div>
+        </article>
+      </section>
+
+      <aside class="panel pedido">
+        <h2>Tu pedido</h2>
+        <p id="pedido-vacio" class="aviso">Todavía no has añadido nada.</p>
+        <ul id="pedido-lista" aria-live="polite"></ul>
+        <p class="total">Total: <output id="pedido-total">$0.00</output></p>
+        <button type="button" id="vaciar" class="boton boton-claro boton-ancho">Vaciar pedido</button>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p><strong>Estadio Reales Tamarindos</strong> · Portoviejo, Manabí</p>
+      <p>Integrantes: Angel Adrian Sanchez Salvatierra, Rommel Moises Zambrano Lucas</p>
+      <p>Proyecto de medio ciclo · Desarrollo basado en plataformas</p>
+    </div>
+  </footer>
+  <script src="js/snacks.js"></script>
+</body>
+</html>

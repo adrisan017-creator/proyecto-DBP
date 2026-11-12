@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear cuenta | Estadio Reales Tamarindos</title>
+  <link rel="stylesheet" href="css/estadio.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor barra-contenido">
+      <a class="marca" href="index.html">
+        <span class="marca-balon" aria-hidden="true">⚽</span>
+        <span>Reales Tamarindos <small>Boletería oficial</small></span>
+      </a>
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="index.html">Partidos</a>
+        <a href="snacks.html">Snacks</a>
+        <a href="registro.html" class="activo" aria-current="page">Crear cuenta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor contenedor-angosto">
+    <h1>Crear cuenta</h1>
+    <p>Llena tus datos para registrarte en la boletería.</p>
+
+    <form id="form-cuenta" class="panel formulario" novalidate>
+        <label for="nombre">Nombres</label>
+        <input type="text" id="nombre" name="nombre">
+
+        <label for="apellido">Apellidos</label>
+        <input type="text" id="apellido" name="apellido">
+
+        <label for="cedula">Cédula (10 dígitos)</label>
+        <input type="text" id="cedula" name="cedula">
+
+        <label for="celular">Celular (10 dígitos)</label>
+        <input type="tel" id="celular" name="celular">
+
+        <label for="canton">Cantón</label>
+        <select id="canton" name="canton">
+          <option value="">Elige tu cantón</option>
+          <option>Portoviejo</option>
+          <option>Manta</option>
+          <option>Montecristi</option>
+          <option>Jipijapa</option>
+          <option>Rocafuerte</option>
+          <option>Santa Ana</option>
+          <option>Chone</option>
+        </select>
+
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email">
+
+        <label for="clave">Contraseña (mínimo 8 caracteres)</label>
+        <input type="password" id="clave" name="clave">
+
+        <label for="repetir">Repite la contraseña</label>
+        <input type="password" id="repetir" name="repetir">
+
+        <p>
+          <input type="checkbox" id="acepto" name="acepto">
+          <label for="acepto" class="en-linea">Acepto los términos y condiciones</label>
+        </p>
+
+        <p id="aviso-cuenta" class="aviso" aria-live="polite"></p>
+
+        <button type="submit" class="boton">Registrarme</button>
+    </form>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p><strong>Estadio Reales Tamarindos</strong> · Portoviejo, Manabí</p>
+      <p>Integrantes: Angel Adrian Sanchez Salvatierra, Rommel Moises Zambrano Lucas</p>
+      <p>Proyecto de medio ciclo · Desarrollo basado en plataformas</p>
+    </div>
+  </footer>
+  <script src="js/registro.js"></script>
+</body>
+</html>

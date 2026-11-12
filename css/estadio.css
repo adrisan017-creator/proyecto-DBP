@@ -1,0 +1,561 @@
+/* Boletería Estadio Reales Tamarindos */
+
+:root {
+  --verde-oscuro: #0b3d24;
+  --verde: #17804a;
+  --amarillo: #f5c518;
+  --fondo: #f3f6f1;
+  --texto: #1c2a22;
+  --gris: #5d6b63;
+  --borde: #d9e2da;
+  --rojo: #b3261e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: var(--texto);
+  background-color: var(--fondo);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
+}
+
+.contenedor {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+main.contenedor {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.contenedor-angosto {
+  max-width: 720px;
+}
+
+.oculto {
+  position: absolute;
+  left: -9999px;
+}
+
+/* ---------- Barra superior ---------- */
+
+.barra {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--verde-oscuro);
+  border-bottom: 4px solid var(--amarillo);
+}
+
+.barra-contenido {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.marca small {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: var(--amarillo);
+}
+
+.marca-balon {
+  font-size: 1.8rem;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.menu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+}
+
+.menu a:hover,
+.menu a:focus {
+  background-color: var(--verde);
+}
+
+.menu a.activo {
+  background-color: var(--amarillo);
+  color: var(--verde-oscuro);
+  font-weight: bold;
+}
+
+/* ---------- Portada ---------- */
+
+.portada {
+  background: linear-gradient(120deg, var(--verde-oscuro), var(--verde));
+  color: #ffffff;
+  padding: 3rem 0;
+}
+
+.portada h1 {
+  font-size: 2.4rem;
+}
+
+.portada p {
+  max-width: 560px;
+}
+
+/* ---------- Elementos comunes ---------- */
+
+.etiqueta {
+  margin: 0 0 0.3rem 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--verde);
+}
+
+.etiqueta-clara {
+  color: var(--amarillo);
+}
+
+.boton {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--verde);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.boton:hover,
+.boton:focus {
+  background-color: var(--verde-oscuro);
+}
+
+.boton-amarillo {
+  background-color: var(--amarillo);
+  color: var(--verde-oscuro);
+}
+
+.boton-amarillo:hover,
+.boton-amarillo:focus {
+  background-color: #ffffff;
+}
+
+.boton-claro {
+  background-color: #ffffff;
+  color: var(--verde-oscuro);
+  border: 1px solid var(--borde);
+}
+
+.boton-claro:hover,
+.boton-claro:focus {
+  background-color: var(--fondo);
+}
+
+.boton-ancho {
+  width: 100%;
+}
+
+.panel {
+  background-color: #ffffff;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.aviso {
+  color: var(--gris);
+  min-height: 1.5em;
+}
+
+.aviso-bien {
+  color: var(--verde);
+  font-weight: bold;
+}
+
+.aviso-mal {
+  color: var(--rojo);
+  font-weight: bold;
+}
+
+.total {
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-top: 1px dashed var(--borde);
+  padding-top: 0.75rem;
+}
+
+.total output {
+  color: var(--verde);
+}
+
+.dos-columnas {
+  display: grid;
+  gap: 1.25rem;
+  align-items: start;
+}
+
+/* ---------- Lista de partidos ---------- */
+
+.lista-partidos {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.partido {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.75rem 1rem;
+  align-items: center;
+  background-color: #ffffff;
+  border: 1px solid var(--borde);
+  border-left: 6px solid var(--verde);
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+
+.partido > img {
+  display: none;
+  border-radius: 8px;
+}
+
+.partido-fecha {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 64px;
+  padding: 0.4rem;
+  border-radius: 8px;
+  background-color: var(--verde-oscuro);
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+
+.partido-fecha strong {
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--amarillo);
+}
+
+.partido-info p {
+  margin: 0;
+  color: var(--gris);
+}
+
+.partido-info .etiqueta {
+  color: var(--verde);
+}
+
+.partido .boton {
+  grid-column: 1 / -1;
+}
+
+.equipos {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* ---------- Página de boletos ---------- */
+
+.volver {
+  color: var(--verde);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.ficha {
+  display: grid;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.ficha img {
+  border-radius: 12px;
+}
+
+.datos {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 0;
+}
+
+.datos li {
+  background-color: #ffffff;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+
+.datos span {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--gris);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.chip {
+  padding: 0.35rem 0.8rem;
+  border: 1px solid var(--verde);
+  border-radius: 999px;
+  background-color: #ffffff;
+  color: var(--verde-oscuro);
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.chip-activo {
+  background-color: var(--verde);
+  color: #ffffff;
+}
+
+.tabla-caja {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.6rem;
+  text-align: left;
+  border-bottom: 1px solid var(--borde);
+}
+
+thead th {
+  background-color: var(--verde-oscuro);
+  color: #ffffff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--fondo);
+}
+
+/* ---------- Formularios ---------- */
+
+.campo {
+  margin-bottom: 0.9rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.2rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #9fb0a5;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: #ffffff;
+}
+
+input:focus,
+select:focus,
+.chip:focus,
+.boton:focus {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 1px;
+}
+
+.formulario input,
+.formulario select {
+  margin-bottom: 0.9rem;
+}
+
+.formulario input[type="checkbox"] {
+  width: auto;
+  margin-bottom: 0;
+}
+
+.en-linea {
+  display: inline;
+  font-weight: normal;
+}
+
+.con-fallo {
+  border: 2px solid var(--rojo);
+}
+
+/* ---------- Snacks ---------- */
+
+.snacks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.snack {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 1px solid var(--borde);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.snack img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--borde);
+}
+
+.snack-cuerpo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0.9rem;
+}
+
+.snack-cuerpo p {
+  margin: 0 0 0.75rem 0;
+  color: var(--gris);
+  flex: 1;
+}
+
+.snack-cuerpo select {
+  margin-bottom: 0.6rem;
+}
+
+.precio {
+  align-self: flex-start;
+  margin-bottom: 0.4rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 999px;
+  background-color: var(--amarillo);
+  color: var(--verde-oscuro);
+  font-weight: bold;
+}
+
+#pedido-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#pedido-lista li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--borde);
+}
+
+.quitar {
+  border: 0;
+  background: none;
+  color: var(--rojo);
+  font-family: inherit;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---------- Pie ---------- */
+
+.pie {
+  background-color: var(--verde-oscuro);
+  color: #dfe9e2;
+  padding: 1.25rem 0;
+  font-size: 0.9rem;
+}
+
+.pie p {
+  margin: 0.2rem 0;
+}
+
+/* ---------- Pantallas medianas y grandes ---------- */
+
+@media (min-width: 640px) {
+  .partido {
+    grid-template-columns: auto auto 1fr auto;
+  }
+
+  .partido > img {
+    display: block;
+    width: 84px;
+  }
+
+  .partido .boton {
+    grid-column: auto;
+  }
+
+  .ficha {
+    grid-template-columns: 260px 1fr;
+  }
+}
+
+@media (min-width: 900px) {
+  .dos-columnas {
+    grid-template-columns: 1fr 320px;
+  }
+
+  .compra,
+  .pedido {
+    position: sticky;
+    top: 5.5rem;
+  }
+
+  .portada h1 {
+    font-size: 3rem;
+  }
+}

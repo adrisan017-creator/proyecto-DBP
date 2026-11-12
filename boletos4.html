@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LDU Portoviejo vs Delfín SC | Estadio Reales Tamarindos</title>
+  <link rel="stylesheet" href="css/estadio.css">
+</head>
+<body>
+  <header class="barra">
+    <div class="contenedor barra-contenido">
+      <a class="marca" href="index.html">
+        <span class="marca-balon" aria-hidden="true">⚽</span>
+        <span>Reales Tamarindos <small>Boletería oficial</small></span>
+      </a>
+      <nav class="menu" aria-label="Navegación principal">
+        <a href="index.html">Partidos</a>
+        <a href="snacks.html">Snacks</a>
+        <a href="registro.html">Crear cuenta</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="contenedor">
+    <p><a class="volver" href="index.html">← Volver a los partidos</a></p>
+
+    <section class="ficha">
+      <img src="img/afiche4.svg" width="260" height="260" alt="Afiche de LDU Portoviejo contra Delfín SC">
+      <div>
+        <p class="etiqueta">LigaPro · Fecha 18</p>
+        <h1>LDU Portoviejo vs Delfín SC</h1>
+        <ul class="datos">
+          <li><span>Fecha</span>Domingo 13 de diciembre de 2026</li>
+          <li><span>Hora</span>15:00</li>
+          <li><span>Puertas</span>Desde las 12:00</li>
+          <li><span>Lugar</span>Estadio Reales Tamarindos</li>
+        </ul>
+        <p>El clásico manabita. Portoviejo y Manta se enfrentan en el partido más esperado de la provincia.</p>
+      </div>
+    </section>
+
+    <div class="dos-columnas">
+      <section class="panel">
+        <h2>Precios por localidad</h2>
+        <div class="chips" role="group" aria-label="Elegir localidad">
+          <button type="button" class="chip chip-activo" data-zona="todas">Todas</button>
+            <button type="button" class="chip" data-zona="General Norte">General Norte</button>
+            <button type="button" class="chip" data-zona="General Sur">General Sur</button>
+            <button type="button" class="chip" data-zona="Preferencia">Preferencia</button>
+            <button type="button" class="chip" data-zona="Tribuna">Tribuna</button>
+            <button type="button" class="chip" data-zona="Palco">Palco</button>
+        </div>
+        <p id="aviso-zona" class="aviso" aria-live="polite">Se muestran las 5 localidades.</p>
+        <div class="tabla-caja">
+          <table id="precios">
+            <thead>
+              <tr>
+                <th scope="col">Localidad</th>
+                <th scope="col">Ingreso</th>
+                <th scope="col">Adulto</th>
+                <th scope="col">Niño / 3.ª edad</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-zona="General Norte">
+                <th scope="row">General Norte</th>
+                <td>Puerta 1</td>
+                <td>$7.50</td>
+                <td>$3.75</td>
+              </tr>
+              <tr data-zona="General Sur">
+                <th scope="row">General Sur</th>
+                <td>Puerta 4</td>
+                <td>$7.50</td>
+                <td>$3.75</td>
+              </tr>
+              <tr data-zona="Preferencia">
+                <th scope="row">Preferencia</th>
+                <td>Puerta 2</td>
+                <td>$15.00</td>
+                <td>$7.50</td>
+              </tr>
+              <tr data-zona="Tribuna">
+                <th scope="row">Tribuna</th>
+                <td>Puerta 3</td>
+                <td>$22.50</td>
+                <td>$11.25</td>
+              </tr>
+              <tr data-zona="Palco">
+                <th scope="row">Palco</th>
+                <td>Puerta 5</td>
+                <td>$37.50</td>
+                <td>$18.75</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <aside class="panel compra">
+        <h2>Tu compra</h2>
+        <form id="form-compra">
+          <div class="campo">
+            <label for="zona">Localidad</label>
+            <select id="zona" name="zona">
+              <option value="General Norte" data-adulto="7.50" data-reducido="3.75">General Norte</option>
+              <option value="General Sur" data-adulto="7.50" data-reducido="3.75">General Sur</option>
+              <option value="Preferencia" data-adulto="15.00" data-reducido="7.50">Preferencia</option>
+              <option value="Tribuna" data-adulto="22.50" data-reducido="11.25">Tribuna</option>
+              <option value="Palco" data-adulto="37.50" data-reducido="18.75">Palco</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="adultos">Boletos de adulto</label>
+            <input type="number" id="adultos" name="adultos" min="0" max="10" value="1">
+          </div>
+          <div class="campo">
+            <label for="reducidos">Boletos de niño / 3.ª edad</label>
+            <input type="number" id="reducidos" name="reducidos" min="0" max="10" value="0">
+          </div>
+          <p class="total">Total: <output id="total" for="zona adultos reducidos">$0.00</output></p>
+          <button type="submit" class="boton boton-ancho">Confirmar compra</button>
+        </form>
+        <p id="aviso-compra" class="aviso" aria-live="polite"></p>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <p><strong>Estadio Reales Tamarindos</strong> · Portoviejo, Manabí</p>
+      <p>Integrantes: Angel Adrian Sanchez Salvatierra, Rommel Moises Zambrano Lucas</p>
+      <p>Proyecto de medio ciclo · Desarrollo basado en plataformas</p>
+    </div>
+  </footer>
+  <script src="js/boletos.js"></script>
+</body>
+</html>

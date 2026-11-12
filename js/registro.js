@@ -6,6 +6,7 @@ const aviso = document.getElementById("aviso-cuenta");
 // Muestra el error, marca el campo en rojo y pone el cursor en él
 function mostrarError(campo, texto) {
   campo.classList.add("con-fallo");
+  campo.setAttribute("aria-invalid", "true");
   campo.focus();
   aviso.className = "aviso aviso-mal";
   aviso.textContent = texto;
@@ -15,6 +16,7 @@ function limpiarErrores() {
   const marcados = formulario.querySelectorAll(".con-fallo");
   for (const campo of marcados) {
     campo.classList.remove("con-fallo");
+    campo.removeAttribute("aria-invalid");
   }
   aviso.textContent = "";
 }

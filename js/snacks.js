@@ -25,6 +25,8 @@ function dibujarPedido() {
     quitar.addEventListener("click", () => {
       pedido.splice(posicion, 1);
       dibujarPedido();
+      // La lista se volvió a dibujar: se deja el foco en un botón que sigue existiendo
+      document.getElementById("vaciar").focus();
     });
 
     li.append(texto, quitar);

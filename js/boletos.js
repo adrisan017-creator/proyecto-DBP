@@ -12,6 +12,7 @@ function mostrarZona(zona) {
 
   for (const chip of chips) {
     chip.classList.toggle("chip-activo", chip.dataset.zona === zona);
+    chip.setAttribute("aria-pressed", chip.dataset.zona === zona);
   }
 
   if (zona === "todas") {

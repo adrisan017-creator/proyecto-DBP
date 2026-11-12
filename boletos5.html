@@ -45,16 +45,17 @@
       <section class="panel">
         <h2>Precios por localidad</h2>
         <div class="chips" role="group" aria-label="Elegir localidad">
-          <button type="button" class="chip chip-activo" data-zona="todas">Todas</button>
-            <button type="button" class="chip" data-zona="General Norte">General Norte</button>
-            <button type="button" class="chip" data-zona="General Sur">General Sur</button>
-            <button type="button" class="chip" data-zona="Preferencia">Preferencia</button>
-            <button type="button" class="chip" data-zona="Tribuna">Tribuna</button>
-            <button type="button" class="chip" data-zona="Palco">Palco</button>
+          <button type="button" class="chip chip-activo" data-zona="todas" aria-pressed="true">Todas</button>
+            <button type="button" class="chip" data-zona="General Norte" aria-pressed="false">General Norte</button>
+            <button type="button" class="chip" data-zona="General Sur" aria-pressed="false">General Sur</button>
+            <button type="button" class="chip" data-zona="Preferencia" aria-pressed="false">Preferencia</button>
+            <button type="button" class="chip" data-zona="Tribuna" aria-pressed="false">Tribuna</button>
+            <button type="button" class="chip" data-zona="Palco" aria-pressed="false">Palco</button>
         </div>
         <p id="aviso-zona" class="aviso" aria-live="polite">Se muestran las 5 localidades.</p>
-        <div class="tabla-caja">
+        <div class="tabla-caja" role="region" aria-label="Tabla de precios" tabindex="0">
           <table id="precios">
+            <caption class="oculto">Precios de los boletos por localidad y tipo de boleto</caption>
             <thead>
               <tr>
                 <th scope="col">Localidad</th>
